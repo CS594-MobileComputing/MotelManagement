@@ -123,4 +123,27 @@ import java.util.List;
 
     }
 
+    public boolean update(ObjectCustomer objectCustomer) {
+
+        ContentValues values = new ContentValues();
+
+        values.put("name", objectCustomer.name);
+        values.put("email", objectCustomer.email);
+        values.put("address", objectCustomer.address);
+        values.put("check_in", objectCustomer.check_in);
+        values.put("check_out", objectCustomer.check_out);
+
+        String where = "id = ?";
+
+        String[] whereArgs = { Integer.toString(objectCustomer.id) };
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        boolean updateSuccessful = db.update("customers", values, where, whereArgs) > 0;
+        db.close();
+
+        return updateSuccessful;
+
+    }
+
 }
