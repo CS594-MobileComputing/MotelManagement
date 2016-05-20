@@ -146,4 +146,15 @@ import java.util.List;
 
     }
 
+    public boolean delete(int id) {
+        boolean deleteSuccessful = false;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        deleteSuccessful = db.delete("customers", "id = '" + id + "'", null) > 0;
+        db.close();
+
+        return deleteSuccessful;
+
+    }
+
 }

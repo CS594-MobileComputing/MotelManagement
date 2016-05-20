@@ -87,13 +87,13 @@ public class MainActivity extends AppCompatActivity {
 
                 String textViewContents = "NAME : " + customerName + " CHECK IN :  " + customerCheckIn + " CHECK OUT : " + customerCheckOut;
 
-                TextView textViewStudentItem = new TextView(this);
-                textViewStudentItem.setPadding(0, 10, 0, 10);
-                textViewStudentItem.setText(textViewContents);
-                textViewStudentItem.setTag(Integer.toString(id));
-                textViewStudentItem.setOnLongClickListener(new OnLongClickListenerCustomerRecord());
+                TextView textViewCustomerItem = new TextView(this);
+                textViewCustomerItem.setPadding(0, 10, 0, 10);
+                textViewCustomerItem.setText(textViewContents);
+                textViewCustomerItem.setTag(Integer.toString(id));
+                textViewCustomerItem.setOnLongClickListener(new OnLongClickListenerCustomerRecord());
 
-                linearLayoutRecords.addView(textViewStudentItem);
+                linearLayoutRecords.addView(textViewCustomerItem);
             }
 
         }

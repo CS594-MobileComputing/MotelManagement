@@ -22,15 +22,28 @@ import android.widget.Toast;
             context = view.getContext();
             id = view.getTag().toString();
 
+            final CharSequence[] items = { "Edit", "Delete" };
 
+            new AlertDialog.Builder(context).setTitle("Customer Record")
+            .setItems(items, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int item) {
 
-    final CharSequence[] items = { "Edit", "Delete" };
-
-    new AlertDialog.Builder(context).setTitle("Student Record")
-    .setItems(items, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int item) {
             if (item == 0) {
                 editRecord(Integer.parseInt(id));
+            }
+            else if (item == 1) {
+
+                boolean deleteSuccessful = new TableControllerCustomer(context).delete(Integer.parseInt(id));
+
+                if (deleteSuccessful){
+                    Toast.makeText(context, "Customer was deleted.", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(context, "Unable to delete Customer details.", Toast.LENGTH_SHORT).show();
+                }
+
+                ((MainActivity) context).countRecords();
+                ((MainActivity) context).readRecords();
+
             }
             dialog.dismiss();
 
