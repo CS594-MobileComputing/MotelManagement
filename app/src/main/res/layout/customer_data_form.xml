@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <!-- <EditText
+        android:id="@+id/editTextCustomerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:hint="Guest name"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextCustomerEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextCustomerName"
+        android:hint="Email Id"
+        android:singleLine="true" />-->
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtName"
+        android:layout_marginTop="15dp"
+        android:hint="GUEST NAME">
+
+    <requestFocus />
+    </EditText>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/txtEmailId"
+        android:layout_marginTop="15dp"
+        android:hint="EMAIL ADDRESS"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName|text"
+        android:ems="10"
+        android:id="@+id/txtAddress"
+        android:layout_marginTop="15dp"
+        android:hint="ADDRESS" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName|text"
+        android:ems="10"
+        android:id="@+id/txtCheckIn"
+        android:layout_marginTop="15dp"
+        android:hint="CHECK IN DATE" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName|text"
+        android:ems="10"
+        android:id="@+id/txtCheckOut"
+        android:layout_marginTop="15dp"
+        android:hint="CHECK OUT DATE" />
+
+</LinearLayout>
