@@ -41,8 +41,13 @@ import android.widget.Toast;
                     Toast.makeText(context, "Unable to delete Customer details.", Toast.LENGTH_SHORT).show();
                 }
 
+<<<<<<< HEAD
                /* ((MainActivity) context).countRecords();
                 ((MainActivity) context).readRecords();*/
+=======
+                ((MainActivity) context).countRecords();
+                ((MainActivity) context).readRecords();
+>>>>>>> 86ca53cee295f7cca28a822fb03e60764b0e2ee9
 
             }
             dialog.dismiss();
@@ -94,9 +99,15 @@ import android.widget.Toast;
                                 }else{
                                     Toast.makeText(context, "Unable to update customer record.", Toast.LENGTH_SHORT).show();
                                 }
+<<<<<<< HEAD
 /*
                                 ((MainActivity) context).countRecords();
                                 ((MainActivity) context).readRecords();*/
+=======
+
+                                ((MainActivity) context).countRecords();
+                                ((MainActivity) context).readRecords();
+>>>>>>> 86ca53cee295f7cca28a822fb03e60764b0e2ee9
 
                                 dialog.cancel();
                             }
