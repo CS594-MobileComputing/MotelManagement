@@ -20,11 +20,9 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-<<<<<<< HEAD
-    <!--<include layout="@layout/home" />-->
-=======
 
->>>>>>> 86ca53cee295f7cca28a822fb03e60764b0e2ee9
+    <!--<include layout="@layout/home" />-->
+
     <include layout="@layout/content_main" />
 
     <!--<android.support.design.widget.FloatingActionButton
