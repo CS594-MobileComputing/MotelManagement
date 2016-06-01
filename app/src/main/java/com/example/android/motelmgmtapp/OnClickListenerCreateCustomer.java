@@ -56,8 +56,8 @@ public class OnClickListenerCreateCustomer implements View.OnClickListener{
                                     Toast.makeText(context, "Unable to save customer information.", Toast.LENGTH_SHORT).show();
                                 }
 
-                                ((MainActivity) context).countRecords();
-                                ((MainActivity) context).readRecords();
+                                /*((MainActivity) context).countRecords();
+                                ((MainActivity) context).readRecords();*/
 
                                 dialog.cancel();
                             }

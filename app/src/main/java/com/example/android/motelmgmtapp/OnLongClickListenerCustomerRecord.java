@@ -45,8 +45,8 @@ import android.widget.Toast;
                /* ((MainActivity) context).countRecords();
                 ((MainActivity) context).readRecords();*/
 
-                ((MainActivity) context).countRecords();
-                ((MainActivity) context).readRecords();
+                /*((MainActivity) context).countRecords();
+                ((MainActivity) context).readRecords();*/
 
 
             }
@@ -105,8 +105,8 @@ import android.widget.Toast;
                                 ((MainActivity) context).readRecords();*/
 
 
-                                ((MainActivity) context).countRecords();
-                                ((MainActivity) context).readRecords();
+                                /*((MainActivity) context).countRecords();
+                                ((MainActivity) context).readRecords();*/
 
 
                                 dialog.cancel();

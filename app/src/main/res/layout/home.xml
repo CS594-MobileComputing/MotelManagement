@@ -103,7 +103,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TotalRevenue"
+                    android:text="Total Revenue"
                     android:id="@+id/totalrevenue"
                     android:layout_column="17"
                     android:layout_marginTop="10dp" />
