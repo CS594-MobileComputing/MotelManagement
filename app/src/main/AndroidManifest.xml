@@ -14,6 +14,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,22 +23,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewReservation"
-            android:label="@string/title_activity_new_reservation"
+            android:name=".StayDetails"
+            android:label="@string/title_activity_stay_details"
+            android:parentActivityName=".GuestDetails"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.GuestDetails" />
+        </activity>
+        <activity
+            android:name=".Charges"
+            android:label="@string/title_activity_charges"
+            android:parentActivityName=".StayDetails"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.StayDetails" />
+        </activity>
+        <activity
+            android:name=".GuestDetails"
+            android:label="@string/title_activity_guest_details"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.motelmgmtapp.MainActivity" />
         </activity>
         <activity
-            android:name=".StayDetails"
-            android:label="@string/title_activity_stay_details"
-            android:parentActivityName=".NewReservation"
+            android:name=".Payment"
+            android:label="@string/title_activity_payment"
+            android:parentActivityName=".Charges"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.motelmgmtapp.NewReservation" />
+                android:value="com.example.android.motelmgmtapp.Charges" />
         </activity>
     </application>
 

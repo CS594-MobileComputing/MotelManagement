@@ -1,7 +1,7 @@
 package com.example.android.motelmgmtapp;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,16 +9,14 @@ import android.view.ViewGroup;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class NewReservationFragment extends Fragment {
+public class PaymentFragment extends Fragment {
 
-    public NewReservationFragment() {
+    public PaymentFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_new_reservation, container, false);
+        return inflater.inflate(R.layout.fragment_payment, container, false);
     }
-
-
 }

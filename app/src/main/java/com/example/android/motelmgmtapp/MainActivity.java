@@ -1,6 +1,7 @@
 package com.example.android.motelmgmtapp;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -17,16 +18,37 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         Button newReservationButton = (Button) findViewById(R.id.newreservation);
         newReservationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next = new Intent(MainActivity.this, NewReservation.class);
+                Intent next = new Intent(MainActivity.this, GuestDetails.class);
 
                 startActivity(next);
             }
         });
+
+        /*Button stayDetailsButton = (Button) findViewById(R.id.stay_details);
+        stayDetailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(MainActivity.this, StayDetails.class);
+
+                startActivity(next);
+            }
+        });
+
+        Button addGuestDetailsButton = (Button) findViewById(R.id.guest_details);
+        addGuestDetailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(MainActivity.this, GuestDetails.class);
+
+                startActivity(next);
+            }
+        });*/
 
         /*Button buttonCreateCustomer = (Button) findViewById(R.id.buttonCreateCustomer);
         buttonCreateCustomer.setOnClickListener(new OnClickListenerCreateCustomer());

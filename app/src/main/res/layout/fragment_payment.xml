@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="left|top"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guest"
+                android:id="@+id/guest"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="5dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stay"
+                android:id="@+id/stay"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Charges"
+                android:id="@+id/charges"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payments"
+                android:id="@+id/payments"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp" />
+        </TableRow>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:layout_gravity="right|bottom">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="168dp"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Balance Due :"
+                            android:id="@+id/balance"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/editText3" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Payment Type :"
+                            android:id="@+id/pmtType"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp" />
+
+                        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RadioButton android:id="@+id/cash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cash"
+                                android:onClick="onRadioButtonClicked"/>
+                            <RadioButton android:id="@+id/credit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Credit Card"
+                                android:onClick="onRadioButtonClicked"/>
+                            <RadioButton android:id="@+id/debit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Debit Card"
+                                android:onClick="onRadioButtonClicked"/>
+                        </RadioGroup>
+
+                    </TableRow>
+
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp">
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discard Reservation"
+                            android:id="@+id/discard_resevation"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.33"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginBottom="5dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rent Room"
+                            android:id="@+id/rent_room"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.48"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="5dp" />
+                    </TableRow>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </TableLayout>
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
