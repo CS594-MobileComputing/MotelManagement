@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@drawable/bluesky"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
@@ -24,6 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Guest"
+                android:background="#33ccff"
                 android:id="@+id/guest"
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="5dp" />
@@ -32,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Stay"
+                android:background="#ffffff"
                 android:id="@+id/stay"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
@@ -41,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="Charges"
                 android:id="@+id/charges"
+                android:background="#33ccff"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
 
@@ -48,6 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Payments"
+                android:background="#ffffff"
                 android:id="@+id/payments"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
@@ -74,16 +79,37 @@
             android:layout_marginTop="20dp">
 
             <TextView
-                android:layout_width="168dp"
+                android:layout_width="128dp"
                 android:layout_height="39dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Guest Name :"/>
+                android:textColor="#ffffff"
+                android:text="First Name :"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
+                android:textColor="#ffffff"
+                android:imeOptions="flagNoExtractUi"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtName"
-                android:layout_weight="0.47" />
+                android:layout_weight="0.30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Last Name:"
+                android:textColor="#ffffff"
+                android:id="@+id/textView"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:imeOptions="flagNoExtractUi"
+                android:layout_width="30dp"
+                android:textColor="#ffffff"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText4"
+                android:layout_weight="0.49"
+                android:layout_marginLeft="40dp" />
 
 
         </TableRow>
@@ -92,19 +118,65 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:weightSum="1"
+
+                android:layout_marginTop="20dp">
+
+                <TextView
+
+                    android:layout_width="128dp"
+                    android:textColor="#ffffff"
+                    android:layout_height="39dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="ID:"/>
+
+                <EditText
+                    android:imeOptions="flagNoExtractUi"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtid"
+                    android:textColor="#ffffff"
+                    android:layout_weight="0.36" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Email Address :"
+                    android:layout_marginLeft="10dp" />
+
+                <EditText
+                    android:imeOptions="flagNoExtractUi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtEmailId"
+                    android:textColor="#ffffff"
+                    android:layout_weight="1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:textColor="#ffffff"
                 android:layout_marginTop="20dp">
 
                 <TextView
                     android:layout_width="168dp"
+                    android:textColor="#ffffff"
                     android:layout_height="39dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Address :"/>
 
                 <EditText
+                    android:imeOptions="flagNoExtractUi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtAddress"
-                    android:layout_weight="0.47" />
+                    android:textColor="#ffffff"
+                    android:layout_weight="1" />
 
 
             </TableRow>
@@ -112,40 +184,21 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:textColor="#ffffff"
                 android:weightSum="1"
                 android:layout_marginTop="20dp">
 
                 <TextView
                     android:layout_width="168dp"
-
-                    android:layout_height="39dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Email Address :"/>
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtEmailId"
-                    android:layout_weight="0.47" />
-
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:weightSum="1"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="168dp"
-
+                    android:textColor="#ffffff"
                     android:layout_height="39dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Street :"/>
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:imeOptions="flagNoExtractUi"
+                    android:textColor="#ffffff"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtStreet"
                     android:layout_weight="0.47" />
@@ -154,12 +207,14 @@
             </TableRow>
 
             <TableRow
+
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:weightSum="1"
                 android:layout_marginTop="20dp">
 
                 <TextView
+                    android:textColor="#ffffff"
                     android:layout_width="168dp"
 
                     android:layout_height="39dp"
@@ -167,7 +222,9 @@
                     android:text="City :"/>
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:imeOptions="flagNoExtractUi"
+                    android:textColor="#ffffff"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtcity"
                     android:layout_weight="0.47" />
@@ -183,15 +240,17 @@
 
                 <TextView
                     android:layout_width="168dp"
-
+                    android:textColor="#ffffff"
                     android:layout_height="39dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="State :"/>
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:imeOptions="flagNoExtractUi"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtstate"
+                    android:textColor="#ffffff"
                     android:layout_weight="0.47" />
 
 
@@ -201,19 +260,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:weightSum="1"
+
                 android:layout_marginTop="20dp">
 
                 <TextView
                     android:layout_width="168dp"
-
+                    android:textColor="#ffffff"
                     android:layout_height="39dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Pincode :"/>
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:imeOptions="flagNoExtractUi"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtpincode"
+                    android:textColor="#ffffff"
                     android:layout_weight="0.47" />
 
 
@@ -222,20 +284,23 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+
                 android:weightSum="1"
                 android:layout_marginTop="20dp">
 
                 <TextView
                     android:layout_width="168dp"
-
+                    android:textColor="#ffffff"
                     android:layout_height="39dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Country :"/>
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:imeOptions="flagNoExtractUi"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtcountry"
+                    android:textColor="#ffffff"
                     android:layout_weight="0.47" />
 
 

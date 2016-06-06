@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@drawable/bluesky"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
@@ -24,7 +25,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Guest"
+                android:background="#33ccff"
                 android:id="@+id/guest"
+
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="5dp" />
 
@@ -32,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Stay"
+                android:background="#ffffff"
                 android:id="@+id/stay"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
@@ -40,6 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Charges"
+                android:background="#33ccff"
                 android:id="@+id/charges"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
@@ -48,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Payments"
+                android:background="#ffffff"
                 android:id="@+id/payments"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
@@ -55,7 +61,7 @@
 
 
 
-        <TableLayout
+     <!--   <TableLayout
             android:layout_width="match_parent"
             android:layout_height="216dp"
             android:layout_gravity="right|bottom">
@@ -72,8 +78,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:weightSum="1"
-                        android:layout_marginTop="20dp">
+                        android:weightSum="1">
 
                         <TextView
                             android:layout_width="168dp"
@@ -96,7 +101,8 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:weightSum="1">
                         <TextView
                             android:layout_width="210dp"
                             android:layout_height="39dp"
@@ -106,43 +112,43 @@
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="10dp" />
 
-                        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-                            <RadioButton android:id="@+id/cash"
+                        <RadioGroup
+                            android:id="@+id/radioSource"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Cash"
-                                android:onClick="onRadioButtonClicked"/>
-                            <RadioButton android:id="@+id/credit"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Credit Card"
-                                android:onClick="onRadioButtonClicked"/>
-                            <RadioButton android:id="@+id/debit"
+                                android:id="@+id/cash"
+                                android:checked="false" />
+
+                            <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Debit Card"
-                                android:onClick="onRadioButtonClicked"/>
+                                android:id="@+id/debit"
+                                android:checked="false" />
+
+
+
                         </RadioGroup>
 
-                    </TableRow>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Credit Card"
+                            android:id="@+id/credit"
+                            android:checked="false" />
 
+                    </TableRow>
 
 
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="20dp">
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="40dp"
                         android:layout_marginRight="20dp">
 
                         <Button
@@ -171,7 +177,123 @@
             </ScrollView>
 
         </TableLayout>
+-->
 
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="right|bottom">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:textColor="#ffffff"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Balance Due:"
+                    android:id="@+id/balancedue"
+                    android:layout_marginLeft="20dp" />
+
+                <EditText
+                    android:textColor="#ffffff"
+                    android:imeOptions="flagNoExtractUi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText"
+                    android:layout_weight="0.21" />
+
+            </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Payment Type:"
+
+            android:textColor="#ffffff"            android:id="@+id/payment"
+            android:layout_marginLeft="20dp" />
+
+            <RadioGroup
+                android:id="@+id/radioSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash"
+                    android:id="@+id/cash"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Credit Card"
+                    android:id="@+id/credit"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Debit Card"
+                    android:id="@+id/debit"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+        </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discard Reservation"
+                    android:id="@+id/discard_resevation"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="0.33"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="5dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Finish : Rent Room"
+                    android:id="@+id/rent_room"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="0.48"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp" />
+            </TableRow>
+
+        </LinearLayout>
+        </ScrollView>
+        </TableLayout>
 
 
     </FrameLayout>

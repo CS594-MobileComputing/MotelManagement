@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
           android:orientation="horizontal"
+    android:background="@drawable/bluesky"
     android:layout_width="match_parent"
     android:name="com.example.android.motelmgmtapp.MainActivityFragment"
     android:layout_height="match_parent"
@@ -33,6 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Occupied"
+                    android:background="#ffffff"
                     android:id="@+id/occupied"
                     android:layout_column="17"
                     android:layout_marginTop="10dp" />
@@ -40,10 +42,12 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#33ccff"
                     android:text="Reservation"
                     android:id="@+id/reservation"
                     android:layout_column="17"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp" />
             </TableRow>
 
             <TableRow
@@ -55,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:text="Available"
                     android:id="@+id/available"
+                    android:background="#33ccff"
                     android:layout_column="17"
                     android:layout_marginTop="10dp" />
 
@@ -63,8 +68,10 @@
                     android:layout_height="wrap_content"
                     android:text="Dirty"
                     android:id="@+id/dirty"
+                    android:background="#ffffff"
                     android:layout_column="17"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp" />
             </TableRow>
 
             <TableRow
@@ -76,6 +83,7 @@
                     android:layout_height="wrap_content"
                     android:text="Blocked"
                     android:id="@+id/blocked"
+                    android:background="#ffffff"
                     android:layout_column="17"
                     android:layout_marginTop="10dp" />
 
@@ -84,8 +92,10 @@
                     android:layout_height="wrap_content"
                     android:text="CheckOuts"
                     android:id="@+id/checkout"
+                    android:background="#33ccff"
                     android:layout_column="17"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp" />
             </TableRow>
 
             <TableRow
@@ -97,6 +107,7 @@
                     android:layout_height="wrap_content"
                     android:text="Occupancy"
                     android:id="@+id/occupancy"
+                    android:background="#33ccff"
                     android:layout_column="17"
                     android:layout_marginTop="10dp" />
 
@@ -104,9 +115,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Total Revenue"
+                    android:background="#ffffff"
                     android:id="@+id/totalrevenue"
                     android:layout_column="17"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp" />
             </TableRow>
         </TableLayout>
 
@@ -124,6 +137,7 @@
                     android:id="@+id/walkin"
                     android:layout_column="21"
                     android:layout_width="300dp"
+                    android:background="#33ccff"
                     android:layout_marginTop="10dp" />
             </TableRow>
 
@@ -134,6 +148,7 @@
                 <Button
                     android:text="New Reservation"
                     android:id="@+id/newreservation"
+                    android:background="#ffffff"
                     android:layout_column="21"
                     android:layout_marginTop="20dp" />
             </TableRow>
@@ -146,6 +161,7 @@
                     android:text="Facilities Provided"
                     android:id="@+id/facilities"
                     android:layout_column="21"
+                    android:background="#33ccff"
                     android:layout_marginTop="20dp" />
             </TableRow>
 

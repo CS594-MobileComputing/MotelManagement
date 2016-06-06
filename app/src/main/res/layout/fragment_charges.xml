@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@drawable/bluesky"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
@@ -26,12 +27,14 @@
                 android:text="Guest"
                 android:id="@+id/guest"
                 android:layout_marginLeft="100dp"
+                android:background="#33ccff"
                 android:layout_marginTop="5dp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Stay"
+                android:background="#ffffff"
                 android:id="@+id/stay"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
@@ -40,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Charges"
+                android:background="#33ccff"
                 android:id="@+id/charges"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
@@ -48,6 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Payments"
+                android:background="#ffffff"
                 android:id="@+id/payments"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp" />
@@ -76,18 +81,20 @@
                     android:layout_marginTop="20dp">
 
                     <TextView
-                        android:layout_width="168dp"
-                        android:layout_height="39dp"
+                        android:layout_width="230dp"
+                        android:layout_height="40dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Total Cost :"
+                        android:textColor="#ffffff"
                         android:id="@+id/total"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp" />
 
                     <EditText
+                        android:imeOptions="flagNoExtractUi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:textColor="#ffffff"
                         android:ems="10"
                         android:id="@+id/editText3" />
                     </TableRow>
@@ -100,8 +107,9 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
-                        android:layout_width="210dp"
-                        android:layout_height="39dp"
+                        android:textColor="#ffffff"
+                        android:layout_width="230dp"
+                        android:layout_height="40dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Discount Percent (%):"
                         android:id="@+id/discount"
@@ -113,10 +121,9 @@
                         android:layout_height="30dp"
                         android:id="@+id/seekbar"
                         android:indeterminate="false"
-                        android:layout_marginTop="10dp"
                         android:max="100"
                         android:layout_weight="0.74"
-                        android:layout_marginLeft="20dp" />
+                        android:layout_marginTop="10dp" />
 
 
                 </TableRow>
@@ -129,10 +136,11 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp">
                     <TextView
-                        android:layout_width="210dp"
-                        android:layout_height="39dp"
+                        android:layout_width="230dp"
+                        android:layout_height="40dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Tax Excempt"
+                        android:text="Tax Excempt:"
+                        android:textColor="#ffffff"
                         android:id="@+id/tax"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp" />
@@ -141,10 +149,10 @@
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:text="15 %"
+                        android:textColor="#ffffff"
                         android:id="@+id/tax1"
-                        android:checked="true"
+                        android:checked="false"
                         android:layout_span="2"
-                        android:layout_marginLeft="20dp"
                         android:layout_marginTop="10dp" />
 
                 </TableRow>
@@ -154,16 +162,19 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp">
                     <TextView
-                        android:layout_width="210dp"
-                        android:layout_height="39dp"
+                        android:layout_width="230dp"
+                        android:layout_height="40dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Total Amount :"
                         android:id="@+id/amount"
+                        android:textColor="#ffffff"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp" />
 
                     <EditText
+                        android:textColor="#ffffff"
                         android:layout_width="wrap_content"
+                        android:imeOptions="flagNoExtractUi"
                         android:layout_height="wrap_content"
                         android:inputType="number"
                         android:ems="10"
@@ -175,6 +186,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
+
                     android:layout_marginRight="20dp">
 
                 <Button
