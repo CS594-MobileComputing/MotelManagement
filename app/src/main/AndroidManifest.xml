@@ -97,6 +97,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.motelmgmtapp.MainActivity" />
         </activity>
+        <activity
+            android:name=".Checkout"
+            android:label="@string/title_activity_checkout"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DirtyRooms"
+            android:label="@string/title_activity_dirty_rooms"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

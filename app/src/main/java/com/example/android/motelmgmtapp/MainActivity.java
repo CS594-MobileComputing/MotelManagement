@@ -50,6 +50,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button checkoutButton = (Button) findViewById(R.id.checkout);
+        checkoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(MainActivity.this, Checkout.class);
+
+                startActivity(next);
+            }
+        });
+
+        Button dirtyButton = (Button) findViewById(R.id.dirty);
+        dirtyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(MainActivity.this, DirtyRooms.class);
+
+                startActivity(next);
+            }
+        });
+
         /*Button stayDetailsButton = (Button) findViewById(R.id.stay_details);
         stayDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
