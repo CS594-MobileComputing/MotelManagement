@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -25,6 +25,26 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent next = new Intent(MainActivity.this, GuestDetails.class);
+
+                startActivity(next);
+            }
+        });
+
+        Button availableButton = (Button) findViewById(R.id.available);
+        availableButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(MainActivity.this, AvailableRooms.class);
+
+                startActivity(next);
+            }
+        });
+
+        Button occupiedButton = (Button) findViewById(R.id.occupied);
+        occupiedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(MainActivity.this, Occupied.class);
 
                 startActivity(next);
             }

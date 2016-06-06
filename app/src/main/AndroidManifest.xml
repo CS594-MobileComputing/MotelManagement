@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
@@ -77,6 +76,26 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.motelmgmtapp.Charges" />
+        </activity>
+        <activity
+            android:name=".AvailableRooms"
+            android:label="@string/title_activity_available_rooms"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Occupied"
+            android:label="@string/title_activity_occupied"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.MainActivity" />
         </activity>
     </application>
 

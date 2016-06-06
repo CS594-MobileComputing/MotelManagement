@@ -6,4 +6,6 @@
     <string name="title_activity_charges">Charges</string>
     <string name="title_activity_guest_details">GuestDetails</string>
     <string name="title_activity_payment">Payment</string>
+    <string name="title_activity_available_rooms">AvailableRooms</string>
+    <string name="title_activity_occupied">Occupied</string>
 </resources>

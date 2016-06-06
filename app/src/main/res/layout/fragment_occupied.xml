@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bluesky"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="51dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="King Size Rooms"
+                        android:id="@+id/textView2"
+                        android:layout_weight="0.14"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginLeft="220dp" />
+                </TableRow>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button2" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button3" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button4" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button5" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button7" />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button8" />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button9" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button10" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="51dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Queen Size Rooms"
+                        android:id="@+id/queen"
+                        android:layout_weight="0.14"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginLeft="220dp" />
+                </TableRow>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button11" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button12" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button13" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button14" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button15" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button17" />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button18" />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button19" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:text="New Button"
+                            android:id="@+id/button20" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </FrameLayout>
+</LinearLayout>
