@@ -165,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/editText2" />
+                    android:id="@+id/txtRoomNo" />
             </TableRow>
 
             <TableRow

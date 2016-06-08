@@ -1,19 +1,21 @@
-package com.example.android.motelmgmtapp;
+package com.example.android.motelmgmtapp.activities;
 
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.android.motelmgmtapp.R;
+
 /**
- * A placeholder fragment containing a simple view.
+ * Created by ashish on 6/6/2016.
  */
-public class GuestDetailsFragment extends Fragment {
+public class GuestActivitiesFragment extends Fragment {
 
-    public GuestDetailsFragment() {
+    public GuestActivitiesFragment(){
+
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

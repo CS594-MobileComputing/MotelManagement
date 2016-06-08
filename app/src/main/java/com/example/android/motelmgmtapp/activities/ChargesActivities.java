@@ -1,4 +1,4 @@
-package com.example.android.motelmgmtapp;
+package com.example.android.motelmgmtapp.activities;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -8,7 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class Charges extends AppCompatActivity {
+import com.example.android.motelmgmtapp.R;
+
+public class ChargesActivities extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,7 @@ public class Charges extends AppCompatActivity {
         paymentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next = new Intent(Charges.this, Payment.class);
+                Intent next = new Intent(ChargesActivities.this, PaymentActivities.class);
 
                 startActivity(next);
             }

@@ -1,17 +1,19 @@
-package com.example.android.motelmgmtapp;
+package com.example.android.motelmgmtapp.activities;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A placeholder fragment containing a simple view.
- */
-public class StayDetailsFragment extends Fragment {
+import com.example.android.motelmgmtapp.R;
 
-    public StayDetailsFragment() {
+/**
+ * Created by ashish on 6/7/2016.
+ */
+public class StayActivitiesFragment extends Fragment {
+
+    public StayActivitiesFragment() {
     }
 
     @Override
@@ -20,3 +22,4 @@ public class StayDetailsFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_stay_details, container, false);
     }
 }
+

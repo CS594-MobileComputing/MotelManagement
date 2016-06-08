@@ -1,20 +1,35 @@
-package com.example.android.motelmgmtapp;
+package com.example.android.motelmgmtapp.activities;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
+
+import com.example.android.motelmgmtapp.DatabaseHandler;
+import com.example.android.motelmgmtapp.R;
+import com.example.android.motelmgmtapp.model.StayDetails;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.Calendar;
 
-public class StayDetails extends AppCompatActivity {
+/**
+ * Created by ashish on 6/7/2016.
+ */
+public class StayActivities extends AppCompatActivity {
 
     private TextView CheckInDate;
     private Button pickCheckIn;
@@ -43,7 +58,7 @@ public class StayDetails extends AppCompatActivity {
         chargesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next = new Intent(StayDetails.this, Charges.class);
+                Intent next = new Intent(StayActivities.this, ChargesActivities.class);
 
                 startActivity(next);
             }
@@ -154,8 +169,6 @@ public class StayDetails extends AppCompatActivity {
 
         }
     };
-
-
 
 }
 

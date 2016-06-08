@@ -63,278 +63,278 @@
             android:layout_height="216dp"
             android:layout_gravity="right|bottom">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:weightSum="1"
-            android:layout_marginTop="20dp">
-
-            <TextView
-                android:layout_width="128dp"
-                android:layout_height="39dp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#ffffff"
-                android:text="First Name :"/>
-
-            <EditText
-                android:layout_width="70dp"
-                android:textColor="#ffffff"
-                android:imeOptions="flagNoExtractUi"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtName"
-                android:layout_weight="0.30" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Last Name:"
-                android:textColor="#ffffff"
-                android:id="@+id/textView"
-                android:layout_marginLeft="10dp" />
-
-            <EditText
-                android:imeOptions="flagNoExtractUi"
-                android:layout_width="30dp"
-                android:textColor="#ffffff"
-                android:layout_height="wrap_content"
-                android:id="@+id/editText4"
-                android:layout_weight="0.49"
-                android:layout_marginLeft="40dp" />
-
-
-        </TableRow>
-
-            <TableRow
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:weightSum="1"
+                android:layout_height="wrap_content" >
 
-                android:layout_marginTop="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
 
-                    android:layout_width="128dp"
-                    android:textColor="#ffffff"
-                    android:layout_height="39dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="ID:"/>
+                        <TextView
+                            android:layout_width="128dp"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="#ffffff"
+                            android:text="First Name :"/>
 
-                <EditText
-                    android:imeOptions="flagNoExtractUi"
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtid"
-                    android:textColor="#ffffff"
-                    android:layout_weight="0.36" />
+                        <EditText
+                            android:layout_width="70dp"
+                            android:textColor="#ffffff"
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtFirstName"
+                            android:layout_weight="0.30" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:textColor="#ffffff"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Email Address :"
-                    android:layout_marginLeft="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Last Name:"
+                            android:textColor="#ffffff"
+                            android:id="@+id/textView"
+                            android:layout_marginLeft="10dp" />
 
-                <EditText
-                    android:imeOptions="flagNoExtractUi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtEmailId"
-                    android:textColor="#ffffff"
-                    android:layout_weight="1" />
-
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:weightSum="1"
-                android:textColor="#ffffff"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="168dp"
-                    android:textColor="#ffffff"
-                    android:layout_height="39dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Address :"/>
-
-                <EditText
-                    android:imeOptions="flagNoExtractUi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtAddress"
-                    android:textColor="#ffffff"
-                    android:layout_weight="1" />
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="30dp"
+                            android:textColor="#ffffff"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtLastName"
+                            android:layout_weight="0.49"
+                            android:layout_marginLeft="40dp" />
 
 
-            </TableRow>
+                    </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:textColor="#ffffff"
-                android:weightSum="1"
-                android:layout_marginTop="20dp">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
 
-                <TextView
-                    android:layout_width="168dp"
-                    android:textColor="#ffffff"
-                    android:layout_height="39dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Street :"/>
+                        android:layout_marginTop="20dp">
 
-                <EditText
-                    android:imeOptions="flagNoExtractUi"
-                    android:textColor="#ffffff"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtStreet"
-                    android:layout_weight="0.47" />
+                        <TextView
 
+                            android:layout_width="128dp"
+                            android:textColor="#ffffff"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="ID:"/>
 
-            </TableRow>
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="35dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtid"
+                            android:textColor="#ffffff"
+                            android:layout_weight="0.36" />
 
-            <TableRow
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="#ffffff"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Email Address :"
+                            android:layout_marginLeft="10dp" />
 
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:weightSum="1"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:textColor="#ffffff"
-                    android:layout_width="168dp"
-
-                    android:layout_height="39dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="City :"/>
-
-                <EditText
-                    android:imeOptions="flagNoExtractUi"
-                    android:textColor="#ffffff"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtcity"
-                    android:layout_weight="0.47" />
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtEmailId"
+                            android:textColor="#ffffff"
+                            android:layout_weight="1" />
 
 
-            </TableRow>
+                    </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:weightSum="1"
-                android:layout_marginTop="20dp">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="20dp">
 
-                <TextView
-                    android:layout_width="168dp"
-                    android:textColor="#ffffff"
-                    android:layout_height="39dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="State :"/>
+                        <TextView
+                            android:layout_width="168dp"
+                            android:textColor="#ffffff"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Address :"/>
 
-                <EditText
-                    android:imeOptions="flagNoExtractUi"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtstate"
-                    android:textColor="#ffffff"
-                    android:layout_weight="0.47" />
-
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:weightSum="1"
-
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="168dp"
-                    android:textColor="#ffffff"
-                    android:layout_height="39dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Pincode :"/>
-
-                <EditText
-                    android:imeOptions="flagNoExtractUi"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtpincode"
-                    android:textColor="#ffffff"
-                    android:layout_weight="0.47" />
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtAddress"
+                            android:textColor="#ffffff"
+                            android:layout_weight="1" />
 
 
-            </TableRow>
+                    </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textColor="#ffffff"
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
 
-                android:weightSum="1"
-                android:layout_marginTop="20dp">
+                        <TextView
+                            android:layout_width="168dp"
+                            android:textColor="#ffffff"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Street :"/>
 
-                <TextView
-                    android:layout_width="168dp"
-                    android:textColor="#ffffff"
-                    android:layout_height="39dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Country :"/>
-
-                <EditText
-                    android:imeOptions="flagNoExtractUi"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtcountry"
-                    android:textColor="#ffffff"
-                    android:layout_weight="0.47" />
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:textColor="#ffffff"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtStreet"
+                            android:layout_weight="0.47" />
 
 
-            </TableRow>
+                    </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="82dp"
-                android:layout_gravity="left|bottom"
-                android:weightSum="1"
-                android:orientation="vertical">
+                    <TableRow
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Discard Reservation"
-                    android:id="@+id/discard_resevation"
-                    android:layout_gravity="bottom"
-                    android:layout_weight="0.33"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginBottom="5dp" />
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Next : Stay Details"
-                    android:id="@+id/stay_details"
-                    android:layout_gravity="bottom"
-                    android:layout_weight="0.48"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp" />
-            </TableRow>
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="168dp"
 
-            </LinearLayout>
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="City :"/>
+
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:textColor="#ffffff"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtCity"
+                            android:layout_weight="0.47" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="168dp"
+                            android:textColor="#ffffff"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="State :"/>
+
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtState"
+                            android:textColor="#ffffff"
+                            android:layout_weight="0.47" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="168dp"
+                            android:textColor="#ffffff"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Pincode :"/>
+
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtPincode"
+                            android:textColor="#ffffff"
+                            android:layout_weight="0.47" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="168dp"
+                            android:textColor="#ffffff"
+                            android:layout_height="39dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Country :"/>
+
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtCountry"
+                            android:textColor="#ffffff"
+                            android:layout_weight="0.47" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="82dp"
+                        android:layout_gravity="left|bottom"
+                        android:weightSum="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discard Reservation"
+                            android:id="@+id/discard_resevation"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.33"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginBottom="5dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next : Stay Details"
+                            android:id="@+id/stay_details"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.48"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="5dp" />
+                    </TableRow>
+
+                </LinearLayout>
 
             </ScrollView>
 

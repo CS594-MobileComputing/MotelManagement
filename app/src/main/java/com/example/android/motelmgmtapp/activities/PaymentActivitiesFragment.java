@@ -1,17 +1,20 @@
-package com.example.android.motelmgmtapp;
+package com.example.android.motelmgmtapp.activities;
 
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A placeholder fragment containing a simple view.
- */
-public class PaymentFragment extends Fragment {
+import com.example.android.motelmgmtapp.R;
 
-    public PaymentFragment() {
+/**
+ * Created by ashish on 6/6/2016.
+ */
+public class PaymentActivitiesFragment extends Fragment{
+
+    public PaymentActivitiesFragment(){
+
     }
 
     @Override
