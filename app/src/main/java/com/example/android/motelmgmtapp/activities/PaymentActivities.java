@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.example.android.motelmgmtapp.DatabaseHandler;
@@ -32,6 +34,11 @@ public class PaymentActivities extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     DatabaseHandler dbh;
 
+    public static final String ChargesData = "Guest";
+    SharedPreferences sharedpreferences1;
+
+    Button credit,debit,cash;
+    EditText bal;
 
 
     @Override
@@ -42,6 +49,13 @@ public class PaymentActivities extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
+
+
+        credit = (RadioButton) findViewById(R.id.credit);
+        debit = (RadioButton) findViewById(R.id.debit);
+        cash = (RadioButton) findViewById(R.id.cash);
+        bal = (EditText) findViewById(R.id.editText);
+
         dbh = new DatabaseHandler(this);
 
 
@@ -49,6 +63,7 @@ public class PaymentActivities extends AppCompatActivity {
         final Button paymentButton = (Button) findViewById(R.id.rent_room);
         sharedpreferences = getApplicationContext().getSharedPreferences(GuestData, Context.MODE_PRIVATE);
 
+        sharedpreferences1 = getApplicationContext().getSharedPreferences(ChargesData, Context.MODE_PRIVATE);
 
 
 
@@ -74,28 +89,40 @@ public class PaymentActivities extends AppCompatActivity {
                                 String customerCountry = sharedpreferences.getString("country", "");
 
 
-                                //SharedPreferences shared_stay = getApplicationContext().getSharedPreferences(StayActivities.StayData, Context.MODE_PRIVATE);
+                                SharedPreferences shared_charge =
+                                getApplicationContext().getSharedPreferences(ChargesActivities.ChargesData, Context.MODE_PRIVATE);
 
-                                /*String roomno = shared_stay.getString("room_no", "");
-                                String expedia = shared_stay.getString("expedia", "");
-                                String hotel = shared_stay.getString("hotel", "");
-                                String booking = shared_stay.getString("booking", "");
-                                String check_in = shared_stay.getString("check_in", "");
-                                String check_out = sharedpreferences.getString("check_out", "");
-*/
+                                String total_cost = shared_charge.getString("total_cost", "");
+                                String total_amount = shared_charge.getString("total_amount", "");
+                                String seek = shared_charge.getString("seek", "");
+                                String swi = shared_charge.getString("switch", "");
 
-//                                boolean isInserted_for_stay = dbh.insert_stay_details(roomno,expedia,hotel,booking,check_in,check_out);
+
+                                SharedPreferences shared_stay =
+                                        getApplicationContext().getSharedPreferences(StayActivities.StayData, Context.MODE_PRIVATE);
+
+                                String room_no = shared_charge.getString("room_no", "");
+                                String check_in = shared_charge.getString("check_in", "");
+                                String check_out = shared_charge.getString("check_out", "");
+                                String hotel = shared_charge.getString("hotel", "");
+                                String booking = shared_charge.getString("booking", "");
+                                String expedia = shared_charge.getString("expedia", "");
+
+
+
+
 
                                 boolean isInserted = dbh.insertData(customerFirstName, customerLastName,customerID,customerEmail,customerAddress,customerStreet,customerCity,customerState,customerPincode,customerCountry);
 
-  /*                              if (isInserted_for_stay == true) {
-                                    Toast.makeText(PaymentActivities.this, "DATA INS", Toast.LENGTH_LONG).show();
-                                    //Intent next = new Intent(PaymentActivities.this, MainActivity.class);
-                                    //startActivity(next);
-                                }
-*/
 
-                                if (isInserted == true) {
+                                boolean insertStayDetails = dbh.insert_stay_details(room_no,check_in,check_out,hotel,booking,expedia);
+                                boolean insertChargeDetails = dbh.insert_charge_details(total_cost,total_amount,seek,swi);
+
+                                boolean insertPaymentDetails = dbh.insert_payment_details(bal.getText().toString(),credit.toString(),debit.toString(),cash.toString());
+
+
+                                if (isInserted == true && insertChargeDetails == true && insertStayDetails == true &&
+                                insertPaymentDetails== true && insertPaymentDetails == true) {
                                     Toast.makeText(PaymentActivities.this, "DATA INS", Toast.LENGTH_LONG).show();
                                     Intent next = new Intent(PaymentActivities.this, MainActivity.class);
                                     startActivity(next);

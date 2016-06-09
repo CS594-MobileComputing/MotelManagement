@@ -41,6 +41,13 @@ public class StayActivities extends AppCompatActivity {
     private int month;
     private int day;
 
+
+    public static final String StayData = "Stay";
+
+    EditText room_no, check_in, check_out;
+    RadioButton expedia,booking,hotel;
+    Button b;
+
     static final int DATE_PICKER_IN = 1111;
     static final int DATE_PICKER_OUT = 2222;
 
@@ -53,53 +60,82 @@ public class StayActivities extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 
-
         Button chargesButton = (Button) findViewById(R.id.charge_details);
         chargesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                CheckInDate = (TextView) findViewById(R.id.selectedcheck_in);
+                pickCheckIn= (Button) findViewById(R.id.pick_date_checkIn);
+
+                CheckOutDate = (TextView) findViewById(R.id.selectedcheck_out);
+                pickCheckOut= (Button) findViewById(R.id.pick_date_checkOut);
+                // Get current date by calender
+
+                final Calendar c = Calendar.getInstance();
+                year  = c.get(Calendar.YEAR);
+                month = c.get(Calendar.MONTH);
+                day  = c.get(Calendar.DAY_OF_MONTH);
+
+                // Button listener to show date picker dialog
+
+                pickCheckIn.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+
+                        // On button click show datepicker dialog
+                        showDialog(DATE_PICKER_IN);
+
+                    }
+
+                });
+
+                pickCheckOut.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+
+                        // On button click show datepicker dialog
+                        showDialog(DATE_PICKER_OUT);
+
+                    }
+
+                });
+
+
+                SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences(StayData, Context.MODE_PRIVATE);
+
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+
+
+
+                room_no = (EditText) findViewById(R.id.txtRoomNo);
+                expedia = (RadioButton) findViewById(R.id.expedia);
+
+                booking = (RadioButton) findViewById(R.id.bookingcom);
+                hotel = (RadioButton) findViewById(R.id.hotelcom);
+                expedia = (RadioButton) findViewById(R.id.expedia);
+                //check_in = (EditText) findViewById(R.id.selectedcheck_in);
+                //check_out = (EditText) findViewById(R.id.selectedcheck_out);
+
+
+
+                editor.putString("room_no" ,room_no.getText().toString());
+                editor.putString("expedia" , expedia.getText().toString());
+                editor.putString("hotel" , hotel.getText().toString());
+                editor.putString("booking" , booking.getText().toString());
+                //editor.putString("check_in" ,check_in.getText().toString());
+
+                //editor.putString("check_out" ,check_out.getText().toString());
+
+                editor.commit();
+
+
                 Intent next = new Intent(StayActivities.this, ChargesActivities.class);
 
                 startActivity(next);
             }
-        });
-
-        CheckInDate = (TextView) findViewById(R.id.selectedcheck_in);
-        pickCheckIn= (Button) findViewById(R.id.pick_date_checkIn);
-
-        CheckOutDate = (TextView) findViewById(R.id.selectedcheck_out);
-        pickCheckOut= (Button) findViewById(R.id.pick_date_checkOut);
-        // Get current date by calender
-
-        final Calendar c = Calendar.getInstance();
-        year  = c.get(Calendar.YEAR);
-        month = c.get(Calendar.MONTH);
-        day  = c.get(Calendar.DAY_OF_MONTH);
-
-        // Button listener to show date picker dialog
-
-        pickCheckIn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                // On button click show datepicker dialog
-                showDialog(DATE_PICKER_IN);
-
-            }
-
-        });
-
-        pickCheckOut.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                // On button click show datepicker dialog
-                showDialog(DATE_PICKER_OUT);
-
-            }
-
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -111,17 +147,10 @@ public class StayActivities extends AppCompatActivity {
 
         switch (id) {
             case DATE_PICKER_IN:
-
-                // open datepicker dialog.
-                // set date picker for current date
-                // add pickerListener listner to date picker
                 return new DatePickerDialog(this, pickerListener, year, month, day);
 
             case DATE_PICKER_OUT:
 
-                // open datepicker dialog.
-                // set date picker for current date
-                // add pickerListener listner to date picker
                 return new DatePickerDialog(this, pickerListener1, year, month, day);
         }
         return null;

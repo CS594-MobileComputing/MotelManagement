@@ -41,9 +41,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         String stay_details = "CREATE TABLE STAY_DETAILS " +
                 "( id INTEGER PRIMARY KEY , " +
-                "check_in DATE, " +
-                "check_out DATE, " +
-                "room INTEGER, " +
+                "check_in TEXT, " +
+                "check_out TEXT, " +
+                "room TEXT, " +
                 "source TEXT, " +
                 "FOREIGN KEY(id) REFERENCES GUESTS_DETAILS(id)) ";
 
@@ -53,10 +53,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         String charge_details = "CREATE TABLE CHARGE_DETAILS " +
                 "( id INTEGER PRIMARY KEY , " +
-                "total_cost REAL, " +
-                "discount_percentage REAL, " +
-                "tax_excempt REAL, " +
-                "total_amount REAL, " +
+                "total_cost TEXT, " +
+                "discount_percentage TEXT, " +
+                "tax_excempt TEXT, " +
+                "total_amount TEXT, " +
                 "FOREIGN KEY(id) REFERENCES GUESTS_DETAILS(id)) ";
 
         db.execSQL(charge_details);
@@ -64,7 +64,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         String payment_details = "CREATE TABLE PAYMENT_DETAILS " +
                 "( id INTEGER PRIMARY KEY , " +
-                "balance_due REAL, " +
+                "balance_due TEXT, " +
                 "payment_type TEXT, " +
                 "FOREIGN KEY(id) REFERENCES GUESTS_DETAILS(id)) ";
 
@@ -75,7 +75,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        String sql = "DROP TABLE IF EXISTS GUEST";
+
+        String sql1 = "DROP TABLE IF EXISTS GUESTS_DETAILS";
+        db.execSQL(sql1);
+
+        String sql2 = "DROP TABLE IF EXISTS STAY_DETAILS";
+        db.execSQL(sql2);
+
+        String sql3 = "DROP TABLE IF EXISTS CHARGE_DETAILS";
+        db.execSQL(sql3);
+
+
+        String sql = "DROP TABLE IF EXISTS PAYMENT_DETAILS";
         db.execSQL(sql);
 
 
@@ -149,14 +160,68 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         int max_id = getLastInsertedId(db);
 
-
-
         cv.put("id",max_id);
         cv.put("check_in",check_in);
         cv.put("check_out",check_out);
         cv.put("room",room_no);
         cv.put("source",source);
+
         Long result = db.insert("STAY_DETAILS",null,cv);
+
+        if (result==-1)
+            return false;
+        else return true;
+    }
+
+    public boolean insert_payment_details(String bal,String credit,String debit,String cash){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv= new ContentValues();
+
+        String payment="";
+
+        if(credit != null){
+            payment = "credit";
+        }
+        else if (debit!= null){
+            payment="debit";
+        }
+        else if(cash!=null) {
+            payment = "cash";
+        }
+
+
+        int max_id = getLastInsertedId(db);
+        cv.put("id",max_id);
+        cv.put("balance_due", bal  );
+        cv.put("payment_type",payment);
+        Long result = db.insert("PAYMENT_DETAILS",null,cv);
+
+        if (result==-1)
+            return false;
+        else return true;
+    }
+
+
+
+
+    public boolean insert_charge_details(String total_cost,String total_amount,String seek,String swi)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv= new ContentValues();
+
+        int max_id = getLastInsertedId(db);
+
+        if(max_id == 0 ){
+            max_id = 1;
+        }
+
+        cv.put("id",max_id);
+        cv.put("total_cost",total_cost   );
+        cv.put("discount_percentage",seek);
+        cv.put("tax_excempt",swi);
+        cv.put("total_amount",total_amount);
+        Long result = db.insert("CHARGE_DETAILS",null,cv);
+
 
         //int max_id = getLastInsertedId(db);
         //db.execSQL(max_id);

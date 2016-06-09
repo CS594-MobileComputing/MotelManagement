@@ -96,7 +96,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="#ffffff"
                         android:ems="10"
-                        android:id="@+id/editText3" />
+                        android:id="@+id/txtTotal" />
                     </TableRow>
 
                 <TableRow
@@ -112,14 +112,14 @@
                         android:layout_height="40dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Discount Percent (%):"
-                        android:id="@+id/discount"
+                        android:id="@+id/txtDiscount"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp" />
 
                     <SeekBar
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:id="@+id/seekbar"
+                        android:id="@+id/txtSeekbar"
                         android:indeterminate="false"
                         android:max="100"
                         android:layout_weight="0.74"
@@ -141,7 +141,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Tax Excempt:"
                         android:textColor="#ffffff"
-                        android:id="@+id/tax"
+                        android:id="@+id/txTax"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp" />
 
@@ -150,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:text="15 %"
                         android:textColor="#ffffff"
-                        android:id="@+id/tax1"
+                        android:id="@+id/txtTaxE"
                         android:checked="false"
                         android:layout_span="2"
                         android:layout_marginTop="10dp" />
@@ -178,7 +178,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="number"
                         android:ems="10"
-                        android:id="@+id/amt" />
+                        android:id="@+id/txtTotalAmount" />
 
                 </TableRow>
 
