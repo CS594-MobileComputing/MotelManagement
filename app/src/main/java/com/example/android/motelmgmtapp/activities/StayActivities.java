@@ -16,13 +16,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
-import com.example.android.motelmgmtapp.DatabaseHandler;
 import com.example.android.motelmgmtapp.R;
-import com.example.android.motelmgmtapp.model.StayDetails;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.Calendar;
 

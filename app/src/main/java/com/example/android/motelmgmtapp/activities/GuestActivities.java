@@ -7,17 +7,11 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
 import com.example.android.motelmgmtapp.DatabaseHandler;
-import com.example.android.motelmgmtapp.MainActivity;
 import com.example.android.motelmgmtapp.R;
-import com.example.android.motelmgmtapp.model.GuestDetails;
 
 /**
  * Created by ashish on 6/6/2016.
