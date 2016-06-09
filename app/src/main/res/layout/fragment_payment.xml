@@ -144,6 +144,24 @@
 
         </TableRow>
 
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="EMail Reciept"
+                    android:id="@+id/txtEmail"
+                    android:height="30dp"
+                    android:onClick="sendEmail"
+                    android:layout_marginLeft="220dp" />
+            </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

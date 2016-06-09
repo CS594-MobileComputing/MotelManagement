@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -136,4 +137,51 @@ public class PaymentActivities extends AppCompatActivity {
 
 
         });
-    }}
+    }// Send EMail Reference https://www.youtube.com/watch?v=nj-STGrL7Zc
+    public void sendEmail(View view){
+        if(view.getId()==R.id.txtEmail) {
+            SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences(GuestActivities.GuestData, Context.MODE_PRIVATE);
+
+            String customerFirstName = sharedpreferences.getString("fname", "");
+            String customerEmail = sharedpreferences.getString("email", "");
+
+
+
+            SharedPreferences shared_charge =
+                    getApplicationContext().getSharedPreferences(ChargesActivities.ChargesData, Context.MODE_PRIVATE);
+
+            String total_cost = shared_charge.getString("total_cost", "");
+            String total_amount = shared_charge.getString("total_amount", "");
+
+
+
+            SharedPreferences shared_stay =
+                    getApplicationContext().getSharedPreferences(StayActivities.StayData, Context.MODE_PRIVATE);
+
+            String room_no = shared_stay.getString("room_no", "");
+            String check_in = shared_stay.getString("check_in", "");
+            String check_out = shared_stay.getString("check_out", "");
+            String source = shared_stay.getString("source", "");
+
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setData(Uri.parse("mailto:"));
+            String[] to = {customerEmail};
+            intent.putExtra(Intent.EXTRA_EMAIL, to);
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Your Stay Details at Motel");
+            intent.putExtra(Intent.EXTRA_TEXT, "Hello," +customerFirstName+ System.getProperty("line.separator")+
+                    "Your Receipt for stay at our motel" + System.getProperty("line.separator")+
+                    "Room NO :"+room_no + System.getProperty("line.separator")+
+                    "CheckIn Date :" +check_in + System.getProperty("line.separator")+
+                    "CheckOut Date :" +check_out + System.getProperty("line.separator")+
+                    "Room Cost :" +total_cost+ System.getProperty("line.separator")+
+                    "Tax Amount: 15%" + System.getProperty("line.separator")+
+                    "Total Amount :" +total_amount+ System.getProperty("line.separator")+
+
+                    "THANKS FOR YOUR VISIT, COME AGAIN");
+            intent.setType("message/rfc822");
+
+            startActivity(Intent.createChooser(intent, "Send Email"));
+        }
+    }
+}

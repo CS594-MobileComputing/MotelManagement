@@ -74,6 +74,29 @@
 
                     <TableRow
                         android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
+
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take Picture"
+                            android:onClick="takePic"
+                            android:background="#ffffff"
+                            android:id="@+id/takePic"
+                            android:layout_marginLeft="20dp" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/image"
+                            android:layout_marginLeft="30dp" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:weightSum="1"
                         android:layout_marginTop="20dp">

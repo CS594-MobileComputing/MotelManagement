@@ -86,7 +86,7 @@ public class StayActivities extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedpreferences.edit();
 
 
-                Log.d(room_no.getText().toString(),source.getText().toString());
+
 
 
                 editor.putString("room_no" ,room_no.getText().toString());

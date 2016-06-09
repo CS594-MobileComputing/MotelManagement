@@ -4,20 +4,29 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+
 import com.example.android.motelmgmtapp.DatabaseHandler;
 import com.example.android.motelmgmtapp.R;
+
+import java.io.File;
 
 /**
  * Created by ashish on 6/6/2016.
  */
-public class GuestActivities extends AppCompatActivity {
+public class GuestActivities extends ActionBarActivity {
 
+    static final int  REQUEST_IMAGE_CAPTURE = 1 ;
+    ImageView image;
     public static final String GuestData = "Guest" ;
     SharedPreferences sharedpreferences;
     DatabaseHandler dbh;
@@ -88,9 +97,32 @@ public class GuestActivities extends AppCompatActivity {
 
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Button cameraButton = (Button)findViewById(R.id.takePic);
+        image = (ImageView)findViewById(R.id.image);
+    } //https://www.youtube.com/watch?v=6Z6k7X2vfhk Reference to take picture
+    private File imageFile;
+    public void takePic(View v) {
+
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+       /* imageFile = new File(Environment.
+                getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                "ID" + r.nextInt() + ".png");
+        Uri tempuri = Uri.fromFile(imageFile);
+
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, tempuri);
+        intent.putExtra(MediaStore.ACTION_VIDEO_CAPTURE, 1);*/
+        startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
 
     }
 
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+
+            Bundle extras =data.getExtras();
+            Bitmap photo = (Bitmap) extras.get("data");
+            image.setImageBitmap(photo);
+        }
+    }
 }
 
 
