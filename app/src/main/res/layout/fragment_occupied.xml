@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation= "vertical"
     android:background="@drawable/bluesky"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -56,53 +56,58 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button" />
+                            android:text="101"
+                            android:id="@+id/btn101" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button2" />
+                            android:text="102"
+                            android:id="@+id/btn102" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button3" />
+                            android:text="103"
+                            android:id="@+id/btn103" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button4" />
+                            android:text="104"
+                            android:id="@+id/btn104" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button5" />
+                            android:text="105"
+                            android:id="@+id/btn105" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button7" />
+                            android:text="201"
+                            android:id="@+id/btn201" />
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button8" />
+                            android:text="202"
+                            android:id="@+id/btn202" />
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button9" />
+                            android:text="203"
+                            android:id="@+id/btn203" />
                         <Button
                             android:layout_width="match_parent"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button10" />
+                            android:text="204"
+                            android:id="@+id/btn204" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:text="205"
+                            android:id="@+id/btn205" />
 
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -138,53 +143,59 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button11" />
+                            android:text="106"
+                            android:id="@+id/btn106" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button12" />
+                            android:text="107"
+                            android:id="@+id/btn107" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button13" />
+                            android:text="108"
+                            android:id="@+id/btn108" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button14" />
+                            android:text="109"
+                            android:id="@+id/btn109" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button15" />
+                            android:text="110"
+                            android:id="@+id/btn110" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button17" />
+                            android:text="206"
+                            android:id="@+id/btn206" />
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button18" />
+                            android:text="207"
+                            android:id="@+id/btn207" />
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button19" />
+                            android:text="208"
+                            android:id="@+id/btn208" />
                         <Button
                             android:layout_width="match_parent"
                             android:layout_height="140dp"
-                            android:text="New Button"
-                            android:id="@+id/button20" />
+                            android:text="209"
+                            android:id="@+id/btn209" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:text="210"
+                            android:id="@+id/btn210" />
 
                     </LinearLayout>
                 </HorizontalScrollView>

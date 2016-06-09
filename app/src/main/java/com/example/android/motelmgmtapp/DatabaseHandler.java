@@ -142,21 +142,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
 
-    public boolean insert_stay_details(String room_no,String expedia,String hotel,String booking,String check_in,String check_out)
+    public boolean insert_stay_details(String room_no,String check_in,String check_out,String source)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv= new ContentValues();
-        String source="";
-
-        if(expedia != null){
-            source = "expedia";
-        }
-        else if (booking!= null){
-            source="booking.com";
-        }
-        else if(hotel!=null) {
-            source = "hotel.com";
-        }
 
         int max_id = getLastInsertedId(db);
 
@@ -173,21 +162,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         else return true;
     }
 
-    public boolean insert_payment_details(String bal,String credit,String debit,String cash){
+    public boolean insert_payment_details(String bal,String payment){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv= new ContentValues();
 
-        String payment="";
-
-        if(credit != null){
-            payment = "credit";
-        }
-        else if (debit!= null){
-            payment="debit";
-        }
-        else if(cash!=null) {
-            payment = "cash";
-        }
 
 
         int max_id = getLastInsertedId(db);

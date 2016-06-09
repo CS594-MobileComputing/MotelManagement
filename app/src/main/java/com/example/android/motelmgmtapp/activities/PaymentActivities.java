@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import com.example.android.motelmgmtapp.DatabaseHandler;
 import com.example.android.motelmgmtapp.MainActivity;
@@ -27,9 +28,14 @@ public class PaymentActivities extends AppCompatActivity {
     public static final String ChargesData = "Guest";
     SharedPreferences sharedpreferences1;
 
+
+
     Button credit,debit,cash;
     EditText bal;
 
+
+     RadioButton pay;
+     RadioGroup radioSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +46,6 @@ public class PaymentActivities extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 
-
-        credit = (RadioButton) findViewById(R.id.credit);
-        debit = (RadioButton) findViewById(R.id.debit);
-        cash = (RadioButton) findViewById(R.id.cash);
-        bal = (EditText) findViewById(R.id.editText);
-
         dbh = new DatabaseHandler(this);
 
 
@@ -55,6 +55,8 @@ public class PaymentActivities extends AppCompatActivity {
 
         sharedpreferences1 = getApplicationContext().getSharedPreferences(ChargesData, Context.MODE_PRIVATE);
 
+
+        radioSource = (RadioGroup) findViewById(R.id.radioSource);
 
 
         paymentButton.setOnClickListener(new View.OnClickListener() {
@@ -87,28 +89,32 @@ public class PaymentActivities extends AppCompatActivity {
                                 String seek = shared_charge.getString("seek", "");
                                 String swi = shared_charge.getString("switch", "");
 
+                                int selectedId = radioSource.getCheckedRadioButtonId();
+                                // find the radiobutton by returned id
+                                RadioButton pay = (RadioButton) findViewById(selectedId);
 
                                 SharedPreferences shared_stay =
                                         getApplicationContext().getSharedPreferences(StayActivities.StayData, Context.MODE_PRIVATE);
 
-                                String room_no = shared_charge.getString("room_no", "");
-                                String check_in = shared_charge.getString("check_in", "");
-                                String check_out = shared_charge.getString("check_out", "");
-                                String hotel = shared_charge.getString("hotel", "");
-                                String booking = shared_charge.getString("booking", "");
-                                String expedia = shared_charge.getString("expedia", "");
-
-
-
+                                String room_no = shared_stay.getString("room_no", "");
+                                String check_in = shared_stay.getString("check_in", "");
+                                String check_out = shared_stay.getString("check_out", "");
+                                String source = shared_stay.getString("source", "");
 
 
                                 boolean isInserted = dbh.insertData(customerFirstName, customerLastName,customerID,customerEmail,customerAddress,customerStreet,customerCity,customerState,customerPincode,customerCountry);
 
-
-                                boolean insertStayDetails = dbh.insert_stay_details(room_no,check_in,check_out,hotel,booking,expedia);
+                                boolean insertStayDetails = dbh.insert_stay_details(room_no,check_in,check_out,source);
                                 boolean insertChargeDetails = dbh.insert_charge_details(total_cost,total_amount,seek,swi);
 
-                                boolean insertPaymentDetails = dbh.insert_payment_details(bal.getText().toString(),credit.toString(),debit.toString(),cash.toString());
+
+
+                                bal = (EditText) findViewById(R.id.editText);
+
+                                String balance = bal.getText().toString();
+                                String paym = pay.getText().toString();
+
+                                boolean insertPaymentDetails = dbh.insert_payment_details(balance,paym);
 
 
                                 if (isInserted == true && insertChargeDetails == true && insertStayDetails == true &&
