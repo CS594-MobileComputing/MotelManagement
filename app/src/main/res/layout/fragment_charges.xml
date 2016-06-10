@@ -37,23 +37,21 @@
             android:text="Charges"
             android:id="@+id/charges"
             android:textColor="#000000"
-            android:background="#33ccff"
+            android:background="#ffffff"
+            android:enabled="false"
             android:layout_marginTop="5dp" />
 
         <Button
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Payments"
-            android:enabled="false"
 
             android:textColor="#000000"
-            android:background="#ffffff"
+            android:background="#33ccff"
             android:id="@+id/payments"
 
             android:layout_marginTop="5dp" />
     </TableRow>
-
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -64,7 +62,6 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp">
 
-
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="216dp"
@@ -74,150 +71,166 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:weightSum="1"
-                    android:layout_marginTop="20dp">
-
-                    <TextView
-                        android:layout_width="230dp"
-                        android:layout_height="40dp"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Total Cost :"
-                        android:textColor="#ffffff"
-                        android:id="@+id/total"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp" />
-
-                    <EditText
-                        android:imeOptions="flagNoExtractUi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#ffffff"
-                        android:ems="10"
-                        android:id="@+id/txtTotal" />
-                    </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:weightSum="1"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:textColor="#ffffff"
-                        android:layout_width="230dp"
-                        android:layout_height="40dp"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Discount Percent (%):"
-                        android:id="@+id/txtDiscount"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp" />
-
-                    <SeekBar
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:id="@+id/txtSeekbar"
-                        android:indeterminate="false"
-                        android:max="100"
-                        android:layout_weight="0.74"
-                        android:layout_marginTop="10dp" />
-
-
-                </TableRow>
-
-
-
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp">
-                    <TextView
-                        android:layout_width="230dp"
-                        android:layout_height="40dp"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Tax Excempt:"
-                        android:textColor="#ffffff"
-                        android:id="@+id/txTax"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp" />
-
-                    <Switch
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="15 %"
-                        android:textColor="#ffffff"
-                        android:id="@+id/txtTaxE"
-                        android:checked="false"
-                        android:layout_span="2"
-                        android:layout_marginTop="10dp" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp">
-                    <TextView
-                        android:layout_width="230dp"
-                        android:layout_height="40dp"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Total Amount :"
-                        android:id="@+id/amount"
-                        android:textColor="#ffffff"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp" />
-
-                    <EditText
-                        android:textColor="#ffffff"
-                        android:layout_width="wrap_content"
-                        android:imeOptions="flagNoExtractUi"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:ems="10"
-                        android:id="@+id/txtTotalAmount" />
-
-                </TableRow>
-
-                <TableRow
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
 
-                    android:layout_marginRight="20dp">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Discard Reservation"
-                    android:id="@+id/discard_resevation"
-                    android:layout_gravity="bottom"
-                    android:layout_weight="0.33"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginBottom="5dp" />
+                        <TextView
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Total Cost :"
+                            android:textColor="#ffffff"
+                            android:id="@+id/total"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Next : Payments "
-                    android:id="@+id/payment"
-                    android:layout_gravity="bottom"
-                    android:layout_weight="0.48"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp" />
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:ems="10"
+                            android:id="@+id/txtTotal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Discount Percent (%):"
+                            android:id="@+id/txtDiscount"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp" />
+
+                        <SeekBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:id="@+id/txtSeekbar"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:layout_weight="0.74"
+                            android:layout_marginTop="10dp" />
+
+                        <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:ems="10"
+                            android:id="@+id/discountValue" />
 
 
-                </TableRow>
+                    </TableRow>
 
-            </LinearLayout>
+
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Tax Excempt:"
+                            android:textColor="#ffffff"
+                            android:id="@+id/txTax"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp" />
+
+                        <Switch
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="15 %"
+                            android:textColor="#ffffff"
+                            android:id="@+id/txtTaxE"
+                            android:checked="false"
+                            android:layout_span="2"
+                            android:layout_marginTop="10dp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Total Amount :"
+                            android:id="@+id/amount"
+                            android:textColor="#ffffff"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp" />
+
+                        <EditText
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:imeOptions="flagNoExtractUi"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/txtTotalAmount" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calculate"
+                            android:id="@+id/calculate"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.33"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+
+                        android:layout_marginRight="20dp">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discard Reservation"
+                            android:id="@+id/discard_resevation"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.33"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginBottom="5dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next : Payments "
+                            android:id="@+id/payment"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.48"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="5dp" />
+
+
+                    </TableRow>
+
+                </LinearLayout>
 
             </ScrollView>
 
