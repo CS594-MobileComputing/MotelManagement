@@ -88,7 +88,6 @@ public class StayActivities extends AppCompatActivity {
 
 
 
-
                 editor.putString("room_no" ,room_no.getText().toString());
                 editor.putString("source" , source.getText().toString());
 

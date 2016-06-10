@@ -35,8 +35,8 @@ public class PaymentActivities extends AppCompatActivity {
     EditText bal;
 
 
-     RadioButton pay;
-     RadioGroup radioSource;
+    RadioButton pay;
+    RadioGroup radioSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class PaymentActivities extends AppCompatActivity {
 
 
                                 SharedPreferences shared_charge =
-                                getApplicationContext().getSharedPreferences(ChargesActivities.ChargesData, Context.MODE_PRIVATE);
+                                        getApplicationContext().getSharedPreferences(ChargesActivities.ChargesData, Context.MODE_PRIVATE);
 
                                 String total_cost = shared_charge.getString("total_cost", "");
                                 String total_amount = shared_charge.getString("total_amount", "");
@@ -119,7 +119,7 @@ public class PaymentActivities extends AppCompatActivity {
 
 
                                 if (isInserted == true && insertChargeDetails == true && insertStayDetails == true &&
-                                insertPaymentDetails== true && insertPaymentDetails == true) {
+                                        insertPaymentDetails== true && insertPaymentDetails == true) {
                                     Toast.makeText(PaymentActivities.this, "DATA INS", Toast.LENGTH_LONG).show();
                                     Intent next = new Intent(PaymentActivities.this, MainActivity.class);
                                     startActivity(next);
@@ -133,7 +133,7 @@ public class PaymentActivities extends AppCompatActivity {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
             }
-   // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         });

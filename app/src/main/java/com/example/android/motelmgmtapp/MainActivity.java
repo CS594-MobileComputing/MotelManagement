@@ -6,15 +6,23 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 
 import com.example.android.motelmgmtapp.activities.GuestActivities;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private GoogleApiClient client;
 
+    DatabaseHandler dbh;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        dbh = new DatabaseHandler(this);
+
 
         Button newReservationButton = (Button) findViewById(R.id.newreservation);
         newReservationButton.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
         occupiedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                //setContentView(R.layout.occupied);
+                /*Occupied o = new Occupied();
+                o.setRadioButtonStatus(dbh);
+                */
+
                 Intent next = new Intent(MainActivity.this, Occupied.class);
 
                 startActivity(next);

@@ -5,6 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Dhanashri on 18-05-2016.
@@ -23,6 +28,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         //String name,address, email,street,city,state,pincode,country;
+        String room_status = "CREATE TABLE room_status " +
+                "( room INTEGER PRIMARY KEY , " +
+                "Status TEXT, " +
+                "type TEXT ) ";
+
+        db.execSQL(room_status);
+
 
         String guest_details = "CREATE TABLE GUESTS_DETAILS " +
                 "( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -89,8 +101,34 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String sql = "DROP TABLE IF EXISTS PAYMENT_DETAILS";
         db.execSQL(sql);
 
+        String sql5 = "DROP TABLE IF EXISTS room_status";
+        db.execSQL(sql5);
 
         onCreate(db);
+
+        db.execSQL("insert into room_status(room,status,type) values('101','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('102','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('103','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('104','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('105','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('201','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('202','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('203','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('204','Available','king') ;");
+        db.execSQL("insert into room_status(room,status,type) values('205','Available','king') ;");
+
+
+        db.execSQL("insert into room_status(room,status,type) values('106','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('107','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('108','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('109','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('110','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('206','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('207','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('208','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('209','Available','queen') ;");
+        db.execSQL("insert into room_status(room,status,type) values('210','Available','queen') ;");
+
     }
 
     public int getLastInsertedId(SQLiteDatabase db){
@@ -113,9 +151,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public boolean insertData(String fname,String lname,String address,String email,String id,String street,String state,String city,String pincode,String coutry)
     {
 
-     SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
 
-        //onUpgrade(db,1,2);
+        onUpgrade(db,5,6);
 
         ContentValues cv= new ContentValues();
         cv.put("fname",fname);
@@ -142,6 +180,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
 
+
+
     public boolean insert_stay_details(String room_no,String check_in,String check_out,String source)
     {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -156,6 +196,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         cv.put("source",source);
 
         Long result = db.insert("STAY_DETAILS",null,cv);
+
+        db.execSQL("UPDATE room_status SET status = 'occupied' WHERE room = "+Integer.parseInt(room_no)+"");
 
         if (result==-1)
             return false;
@@ -180,8 +222,103 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
+    public ArrayList getDatabyRoom(String room){
+        ArrayList<String> list = new ArrayList<String>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = db.rawQuery("SELECT gd.fname,sd.check_in,sd.check_out,cd.total_amount FROM  STAY_DETAILS sd,GUESTS_DETAILS gd,CHARGE_DETAILS cd where sd.room = '" + room + "' AND sd.id=gd.id and sd.id = cd.id", null);
+        try {
 
 
+            c.moveToFirst();
+            if (c != null) {
+                do {
+                    for (int i = 0; i < c.getColumnCount(); i++) {
+                        String s = c.getString(i);
+                        list.add(s);
+                        //Log.e("", "" + c.getString(i));
+                    }
+                } while (c.moveToNext());
+            }
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("error in getLabelID in DB() :" + e);
+        }
+        finally
+        {
+            c.close();
+        }
+        return list;
+
+
+    }
+
+
+    public ArrayList getCurrnetRentedRooms () {
+        ArrayList list = new ArrayList();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        //for (int x= 0 ; x< date.size();x++){
+
+        Cursor c = db.rawQuery("SELECT sd.room FROM  STAY_DETAILS", null);
+        try {
+
+            c.moveToFirst();
+            if (c != null) {
+                do {
+                    for (int i = 0; i < c.getColumnCount(); i++) {
+                        String s = c.getString(i);
+                        list.add(s);
+                        //Log.e("", "" + c.getString(i));
+                    }
+                } while (c.moveToNext());
+            }
+        } catch (Exception e) {
+            System.out.println("error in getLabelID in DB() :" + e);
+        } finally {
+            c.close();
+
+        }
+
+        return list;
+    }
+
+
+
+    public ArrayList<String> getCheckIn(){
+        ArrayList<String> list = new ArrayList<String>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = db.rawQuery("SELECT sd.check_in FROM STAY_DETAILS", null);
+        try {
+
+
+            c.moveToFirst();
+            if (c != null) {
+                do {
+                    for (int i = 0; i < c.getColumnCount(); i++) {
+                        String s = c.getString(i);
+                        list.add(s);
+                    }
+                } while (c.moveToNext());
+            }
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("error in getLabelID in DB() :" + e);
+        }
+        finally
+        {
+            c.close();
+        }
+        return list;
+
+
+    }
     public boolean insert_charge_details(String total_cost,String total_amount,String seek,String swi)
     {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -211,5 +348,43 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         else return true;
     }
 
+
+    public ArrayList getOccupied (){
+
+        //System.out.println("inside method call....");
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = db.rawQuery("SELECT room FROM room_status where Status='occupied'", null);
+
+
+        //System.out.print("before try "+c.getCount());
+        try {
+
+            System.out.print("cursor size"+c.getCount());
+            c.moveToFirst();
+            if (c != null) {
+                do {
+                    for (int i = 0; i < c.getColumnCount(); i++) {
+                        int s = c.getInt(i);
+                        list.add(s);
+                    }
+                } while (c.moveToNext());
+            }
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("error in getLabelID in DB() :" + e);
+        }
+        finally
+        {
+            c.close();
+        }
+        //System.out.println("aaaa"+list.size());
+        //Log.d("size", list);
+        return list;
+
+    }
 
 }

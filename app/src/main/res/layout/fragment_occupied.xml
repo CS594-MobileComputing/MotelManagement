@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,6 +31,13 @@
                     android:layout_height="60dp"
                     android:weightSum="1">
 
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPDATE"
+                        android:id="@+id/refresh"
+                        android:layout_weight="0.14" />
+
                     <TextView
                         android:textColor="#ffffff"
                         android:layout_width="wrap_content"
@@ -40,7 +48,10 @@
                         android:layout_weight="0.14"
                         android:layout_marginTop="10dp"
 
-                        android:layout_marginLeft="220dp" />
+                        android:layout_marginLeft="100dp" />
+
+
+
                 </TableRow>
 
                 <HorizontalScrollView
@@ -53,62 +64,111 @@
                         android:orientation="horizontal">
 
 
-                        <Button
+                        <RadioGroup
+                            android:id="@+id/radioGroup1"
                             android:layout_width="wrap_content"
-                            android:layout_height="140dp"
-                            android:text="101"
-                            android:id="@+id/btn101" />
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
 
-                        <Button
-                            android:layout_width="wrap_content"
+                            <RadioButton
+                                android:layout_width="140dp"
+                                android:layout_height="140dp"
+                                android:background="@drawable/yourbuttonbackground"
+                                android:button="@android:color/transparent"
+                                android:text="101"
+                                android:enabled="false"
+                                android:id="@+id/btn101"
+                                android:checked="false" />
+
+                            <RadioButton
+
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="102"
-                            android:id="@+id/btn102" />
+                                android:enabled="false"
+                                android:id="@+id/btn102" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+                            <RadioButton
+
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="103"
-                            android:id="@+id/btn103" />
+                                android:enabled="false"
+                                android:id="@+id/btn103" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+                            <RadioButton
+
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="104"
-                            android:id="@+id/btn104" />
+                                android:enabled="false"
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="140dp"
-                            android:text="105"
-                            android:id="@+id/btn105" />
+                                android:id="@+id/btn104" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+
+                            <RadioButton
+                                android:layout_width="140dp"
+                                android:layout_height="140dp"
+                                android:background="@drawable/yourbuttonbackground"
+                                android:button="@android:color/transparent"
+                                android:text="105"
+                                android:enabled="false"
+
+                                android:id="@+id/btn105"
+                                android:layout_gravity="right" />
+
+                            <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="201"
-                            android:id="@+id/btn201" />
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="140dp"
-                            android:text="202"
-                            android:id="@+id/btn202" />
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="140dp"
-                            android:text="203"
-                            android:id="@+id/btn203" />
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="140dp"
-                            android:text="204"
-                            android:id="@+id/btn204" />
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="140dp"
-                            android:text="205"
-                            android:id="@+id/btn205" />
+                                android:enabled="false"
 
+                                android:id="@+id/btn201" />
+                        <RadioButton
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
+                            android:text="202"
+                            android:enabled="false"
+
+                            android:id="@+id/btn202" />
+                        <RadioButton
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
+                            android:text="203"
+                            android:enabled="false"
+
+                            android:id="@+id/btn203" />
+                        <RadioButton
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
+                            android:text="204"
+                            android:enabled="false"
+
+                            android:id="@+id/btn204" />
+                        <RadioButton
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
+                            android:text="205"
+                            android:enabled="false"
+
+                            android:id="@+id/btn205" />
+                        </RadioGroup>
                     </LinearLayout>
                 </HorizontalScrollView>
 
@@ -139,64 +199,109 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-
-                        <Button
+                        <RadioGroup
+                            android:id="@+id/radioGroup2"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="106"
+                            android:enabled="false"
+
                             android:id="@+id/btn106" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="107"
+                            android:enabled="false"
+
                             android:id="@+id/btn107" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="108"
+                            android:enabled="false"
                             android:id="@+id/btn108" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="109"
+                            android:enabled="false"
+
                             android:id="@+id/btn109" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="110"
+                            android:enabled="false"
+
                             android:id="@+id/btn110" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="206"
+                            android:enabled="false"
+
                             android:id="@+id/btn206" />
-                        <Button
-                            android:layout_width="wrap_content"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="207"
+                            android:enabled="false"
+
                             android:id="@+id/btn207" />
-                        <Button
-                            android:layout_width="wrap_content"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="208"
+                            android:enabled="false"
+
                             android:id="@+id/btn208" />
-                        <Button
-                            android:layout_width="match_parent"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="209"
+                            android:enabled="false"
+
                             android:id="@+id/btn209" />
 
-                        <Button
-                            android:layout_width="match_parent"
+                        <RadioButton
+                            android:layout_width="140dp"
                             android:layout_height="140dp"
+                            android:background="@drawable/yourbuttonbackground"
+                            android:button="@android:color/transparent"
                             android:text="210"
-                            android:id="@+id/btn210" />
+                            android:enabled="false"
 
+                            android:id="@+id/btn210" />
+                        </RadioGroup>
                     </LinearLayout>
                 </HorizontalScrollView>
 

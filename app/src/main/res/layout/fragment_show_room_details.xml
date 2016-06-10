@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bluesky"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="right|bottom">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Room No.:"
+                            android:id="@+id/room_no_txt"
+                            android:layout_marginLeft="20dp" />
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text=""
+                            android:id="@+id/available_room_no"
+                            android:layout_marginLeft="20dp" />
+
+                        </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Guest Name :"
+                            android:id="@+id/guest_name_txt"
+                            android:layout_marginLeft="20dp" />
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text=""
+                            android:id="@+id/available_guest_name"
+                            android:layout_marginLeft="20dp" />
+                        </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Check In:"
+                            android:id="@+id/check_in_txt"
+                            android:layout_marginLeft="20dp" />
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text=""
+                            android:id="@+id/available_check_in"
+                            android:layout_marginLeft="20dp" />
+                        </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Check Out:"
+                            android:id="@+id/check_out_txt"
+                            android:layout_marginLeft="20dp" />
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text=""
+                            android:id="@+id/available_check_out"
+                            android:layout_marginLeft="20dp" />
+
+                        </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Total Amount:"
+                            android:id="@+id/total_amount_txt"
+                            android:layout_marginLeft="20dp" />
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text=""
+                            android:id="@+id/available_total_amount"
+                            android:layout_marginLeft="20dp" />
+
+
+                    </TableRow>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+        </TableLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
