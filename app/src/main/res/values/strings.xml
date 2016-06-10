@@ -10,4 +10,5 @@
     <string name="title_activity_occupied">Occupied</string>
     <string name="title_activity_checkout">Checkout</string>
     <string name="title_activity_dirty_rooms">DirtyRooms</string>
+    <string name="title_activity_facilities">Facilities</string>
 </resources>

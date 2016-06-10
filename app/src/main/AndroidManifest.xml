@@ -5,7 +5,9 @@
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -23,9 +25,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".activities.GuestActivities"
             android:label="@string/title_activity_guest_details"
@@ -35,9 +35,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.motelmgmtapp.MainActivity" />
-
         </activity>
-
         <activity
             android:name=".activities.ChargesActivities"
             android:label="@string/title_activity_charges"
@@ -47,9 +45,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.motelmgmtapp.activities.StayActivities" />
-
         </activity>
-
         <activity
             android:name=".activities.StayActivities"
             android:label="@string/title_activity_stay_details"
@@ -59,9 +55,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.motelmgmtapp.activities.GuestActivities" />
-
         </activity>
-
         <activity
             android:name=".activities.PaymentActivities"
             android:label="@string/title_activity_payment"
@@ -111,11 +105,25 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.motelmgmtapp.MainActivity" />
-        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.Facilities"
+            android:label="@string/title_activity_facilities"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

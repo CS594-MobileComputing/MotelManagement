@@ -82,6 +82,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         db.execSQL(payment_details);
 
+        String facility_details = "CREATE TABLE FACILITY_DETAILS " +
+                "( id INTEGER PRIMARY KEY , " +
+                "room_no TEXT, " +
+                "coffee TEXT, " +
+                "tea TEXT, " +
+                "omlett TEXT, " +
+                "total TEXT )";
+
+        db.execSQL(facility_details);
+
     }
 
     @Override
@@ -103,6 +113,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         String sql5 = "DROP TABLE IF EXISTS room_status";
         db.execSQL(sql5);
+
+        String sql4 = "DROP TABLE IF EXISTS FACILITY_DETAILS";
+        db.execSQL(sql4);
 
         onCreate(db);
 
@@ -385,6 +398,24 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         //Log.d("size", list);
         return list;
 
+    }
+
+    public boolean insert_facility_details(String room_no, String coffee,String tea, String omlett, String total){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv= new ContentValues();
+
+        //int max_id = getLastInsertedId(db);
+        //cv.put("id",max_id);
+        cv.put("room_no", room_no  );
+        cv.put("coffee", coffee  );
+        cv.put("tea",tea);
+        cv.put("omlett", omlett  );
+        cv.put("total",total);
+        Long result = db.insert("FACILITY_DETAILS",null,cv);
+
+        if (result==-1)
+            return false;
+        else return true;
     }
 
 }

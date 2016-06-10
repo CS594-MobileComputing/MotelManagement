@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
+import com.example.android.motelmgmtapp.activities.Facilities;
 import com.example.android.motelmgmtapp.activities.GuestActivities;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -101,17 +102,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*Button stayDetailsButton = (Button) findViewById(R.id.stay_details);
-        stayDetailsButton.setOnClickListener(new View.OnClickListener() {
+        Button facilitiesButton = (Button) findViewById(R.id.facilities);
+        facilitiesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next = new Intent(MainActivity.this, StayDetails.class);
+                Intent next = new Intent(MainActivity.this, Facilities.class);
 
                 startActivity(next);
             }
         });
 
-        Button addGuestDetailsButton = (Button) findViewById(R.id.guest_details);
+       /* Button addGuestDetailsButton = (Button) findViewById(R.id.guest_details);
         addGuestDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
