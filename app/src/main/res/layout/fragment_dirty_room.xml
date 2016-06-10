@@ -34,7 +34,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="UPDATE"
-                        android:id="@+id/Crefresh"
+                        android:id="@+id/Drefresh"
                         android:layout_weight="0.14" />
 
                     <TextView
@@ -61,7 +61,7 @@
 
 
                         <RadioGroup
-                            android:id="@+id/CradioGroup1"
+                            android:id="@+id/DradioGroup1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal" >
@@ -69,13 +69,13 @@
                             <RadioButton
                                 android:layout_width="140dp"
                                 android:layout_height="140dp"
-                                android:enabled="false"
 
                                 android:button="@android:color/transparent"
                                 android:text="101"
+                                android:enabled="false"
                                 android:textStyle="bold"
                                 android:background="#33ccff"
-                                android:id="@+id/Cbtn101" />
+                                android:id="@+id/Dbtn101" />
 
                             <RadioButton
 
@@ -86,8 +86,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="102"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn102"
+                                android:id="@+id/Dbtn102"
                                 android:layout_marginLeft="10dp" />
 
                             <RadioButton
@@ -99,8 +98,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="103"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn103"
+                                android:id="@+id/Dbtn103"
                                 android:layout_marginLeft="10dp" />
 
                             <RadioButton
@@ -112,8 +110,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="104"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn104"
+                                android:id="@+id/Dbtn104"
                                 android:layout_marginLeft="10dp" />
 
 
@@ -125,8 +122,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="105"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn105"
+                                android:id="@+id/Dbtn105"
                                 android:layout_gravity="right"
                                 android:checked="false"
                                 android:layout_marginLeft="10dp" />
@@ -139,8 +135,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="201"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn201"
+                                android:id="@+id/Dbtn201"
                                 android:layout_marginLeft="10dp" />
                             <RadioButton
                                 android:layout_width="140dp"
@@ -150,8 +145,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="202"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn202"
+                                android:id="@+id/Dbtn202"
                                 android:layout_marginLeft="10dp" />
                             <RadioButton
                                 android:layout_width="140dp"
@@ -161,8 +155,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="203"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn203"
+                                android:id="@+id/Dbtn203"
                                 android:layout_marginLeft="10dp" />
                             <RadioButton
                                 android:layout_width="140dp"
@@ -172,8 +165,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="204"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn204"
+                                android:id="@+id/Dbtn204"
                                 android:layout_marginLeft="10dp" />
                             <RadioButton
                                 android:layout_width="140dp"
@@ -183,8 +175,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="205"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn205"
+                                android:id="@+id/Dbtn205"
                                 android:layout_marginLeft="10dp" />
                         </RadioGroup>
                     </LinearLayout>
@@ -218,7 +209,7 @@
                         android:orientation="horizontal">
 
                         <RadioGroup
-                            android:id="@+id/CradioGroup2"
+                            android:id="@+id/DradioGroup2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal" >
@@ -232,8 +223,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="106"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn106" />
+                                android:id="@+id/Dbtn106" />
 
                             <RadioButton
                                 android:layout_width="140dp"
@@ -242,7 +232,8 @@
                                 android:background="#33ccff"
                                 android:button="@android:color/transparent"
                                 android:text="107"
-                                android:id="@+id/Cbtn107"
+
+                                android:id="@+id/Dbtn107"
                                 android:checked="false"
                                 android:layout_marginLeft="10dp" />
 
@@ -253,7 +244,7 @@
                                 android:background="#ffffff"
                                 android:button="@android:color/transparent"
                                 android:text="108"
-                                android:id="@+id/Cbtn108"
+                                android:id="@+id/Dbtn108"
                                 android:checked="false"
                                 android:layout_marginLeft="10dp" />
 
@@ -265,8 +256,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="109"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn109"
+                                android:id="@+id/Dbtn109"
                                 android:layout_marginLeft="10dp" />
 
                             <RadioButton
@@ -277,8 +267,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="110"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn110"
+                                android:id="@+id/Dbtn110"
                                 android:layout_marginLeft="10dp" />
 
                             <RadioButton
@@ -289,8 +278,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="206"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn206"
+                                android:id="@+id/Dbtn206"
                                 android:layout_marginLeft="10dp" />
                             <RadioButton
                                 android:layout_width="140dp"
@@ -299,9 +287,7 @@
                                 android:background="#ffffff"
                                 android:button="@android:color/transparent"
                                 android:text="207"
-                                android:enabled="false"
-
-                                android:id="@+id/Cbtn207"
+                                android:id="@+id/Dbtn207"
                                 android:layout_marginLeft="10dp" />
                             <RadioButton
                                 android:layout_width="140dp"
@@ -310,8 +296,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="208"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn208"
+                                android:id="@+id/Dbtn208"
                                 android:layout_marginLeft="10dp" />
                             <RadioButton
                                 android:layout_width="140dp"
@@ -321,8 +306,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="209"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn209"
+                                android:id="@+id/Dbtn209"
                                 android:layout_marginLeft="10dp" />
 
                             <RadioButton
@@ -333,8 +317,7 @@
                                 android:button="@android:color/transparent"
                                 android:text="210"
                                 android:enabled="false"
-
-                                android:id="@+id/Cbtn210"
+                                android:id="@+id/Dbtn210"
                                 android:layout_marginLeft="10dp" />
                         </RadioGroup>
                     </LinearLayout>

@@ -47,6 +47,15 @@
                 android:value="com.example.android.motelmgmtapp.activities.StayActivities" />
         </activity>
         <activity
+            android:name=".activities.ShowRoomDetails"
+            android:label="@string/title_activity_show_room_details"
+            android:parentActivityName=".Occupied"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.Occupied" />
+        </activity>
+        <activity
             android:name=".activities.StayActivities"
             android:label="@string/title_activity_stay_details"
             android:parentActivityName=".activities.GuestActivities"
@@ -92,6 +101,17 @@
             android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.motelmgmtapp.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.DirtyRoom"
+            android:label="@string/title_activity_dirty_room"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.motelmgmtapp.MainActivity" />

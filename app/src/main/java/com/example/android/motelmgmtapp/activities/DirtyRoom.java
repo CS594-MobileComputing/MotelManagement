@@ -1,4 +1,4 @@
-package com.example.android.motelmgmtapp;
+package com.example.android.motelmgmtapp.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,9 +12,12 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.android.motelmgmtapp.DatabaseHandler;
+import com.example.android.motelmgmtapp.R;
+
 import java.util.ArrayList;
 
-public class Checkout extends AppCompatActivity {
+public class DirtyRoom extends AppCompatActivity {
 
     public static final String room = "RoomNumber" ;
     SharedPreferences sharedpreferences;
@@ -24,7 +27,7 @@ public class Checkout extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.checkout);
+        setContentView(R.layout.dirty_room);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -36,8 +39,8 @@ public class Checkout extends AppCompatActivity {
 
         Button b;
 
-        group1 = (RadioGroup) findViewById(R.id.CradioGroup1);
-        group2 = (RadioGroup) findViewById(R.id.CradioGroup2);
+        group1 = (RadioGroup) findViewById(R.id.DradioGroup1);
+        group2 = (RadioGroup) findViewById(R.id.DradioGroup2);
 
 
 
@@ -48,35 +51,35 @@ public class Checkout extends AppCompatActivity {
 
 
 
-        Button occupiedButton = (Button) findViewById(R.id.Crefresh);
+        Button occupiedButton = (Button) findViewById(R.id.Drefresh);
         occupiedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                ArrayList<Integer> li = dbh.getOccupied();
+                ArrayList<Integer> li = dbh.getDirty();
                 System.out.println("inside method");
 
-                RadioButton rbu1 =(RadioButton)findViewById(R.id.Cbtn101);
-                RadioButton rbu2 =(RadioButton)findViewById(R.id.Cbtn102);
-                RadioButton rbu3 =(RadioButton)findViewById(R.id.Cbtn103);
-                RadioButton rbu4 =(RadioButton)findViewById(R.id.Cbtn104);
-                RadioButton rbu5 =(RadioButton)findViewById(R.id.Cbtn105);
-                RadioButton rbu6 =(RadioButton)findViewById(R.id.Cbtn106);
-                RadioButton rbu7 =(RadioButton)findViewById(R.id.Cbtn107);
-                RadioButton rbu8 =(RadioButton)findViewById(R.id.Cbtn108);
-                RadioButton rbu9 =(RadioButton)findViewById(R.id.Cbtn109);
-                RadioButton rbu10 =(RadioButton)findViewById(R.id.Cbtn110);
-                RadioButton rbu11=(RadioButton)findViewById(R.id.Cbtn201);
-                RadioButton rbu12=(RadioButton)findViewById(R.id.Cbtn202);
-                RadioButton rbu13=(RadioButton)findViewById(R.id.Cbtn203);
-                RadioButton rbu14=(RadioButton)findViewById(R.id.Cbtn204);
-                RadioButton rbu15 =(RadioButton)findViewById(R.id.Cbtn205);
-                RadioButton rbu16=(RadioButton)findViewById(R.id.Cbtn206);
-                RadioButton rbu17=(RadioButton)findViewById(R.id.Cbtn207);
-                RadioButton rbu18=(RadioButton)findViewById(R.id.Cbtn208);
-                RadioButton rbu19=(RadioButton)findViewById(R.id.Cbtn209);
-                RadioButton rbu20=(RadioButton)findViewById(R.id.Cbtn210);
+                RadioButton rbu1 =(RadioButton)findViewById(R.id.Dbtn101);
+                RadioButton rbu2 =(RadioButton)findViewById(R.id.Dbtn102);
+                RadioButton rbu3 =(RadioButton)findViewById(R.id.Dbtn103);
+                RadioButton rbu4 =(RadioButton)findViewById(R.id.Dbtn104);
+                RadioButton rbu5 =(RadioButton)findViewById(R.id.Dbtn105);
+                RadioButton rbu6 =(RadioButton)findViewById(R.id.Dbtn106);
+                RadioButton rbu7 =(RadioButton)findViewById(R.id.Dbtn107);
+                RadioButton rbu8 =(RadioButton)findViewById(R.id.Dbtn108);
+ ;;                RadioButton rbu9 =(RadioButton)findViewById(R.id.Dbtn109);
+                RadioButton rbu10 =(RadioButton)findViewById(R.id.Dbtn110);
+                RadioButton rbu11=(RadioButton)findViewById(R.id.Dbtn201);
+                RadioButton rbu12=(RadioButton)findViewById(R.id.Dbtn202);
+                RadioButton rbu13=(RadioButton)findViewById(R.id.Dbtn203);
+                RadioButton rbu14=(RadioButton)findViewById(R.id.Dbtn204);
+                RadioButton rbu15 =(RadioButton)findViewById(R.id.Dbtn205);
+                RadioButton rbu16=(RadioButton)findViewById(R.id.Dbtn206);
+                RadioButton rbu17=(RadioButton)findViewById(R.id.Dbtn207);
+                RadioButton rbu18=(RadioButton)findViewById(R.id.Dbtn208);
+                RadioButton rbu19=(RadioButton)findViewById(R.id.Dbtn209);
+                RadioButton rbu20=(RadioButton)findViewById(R.id.Dbtn210);
 
 
                 for(int i =0;i<li.size();i++){
@@ -169,10 +172,12 @@ public class Checkout extends AppCompatActivity {
                         editor.putString("room_number" ,rb.getText().toString());
                         editor.commit();
 
-                       dbh.setRoomDirty(rb.getText().toString());
+
+
+                        dbh.setAvailable(rb.getText().toString());
                         rb.setEnabled(false);
 
-                        Intent next = new Intent(Checkout.this, Checkout.class);
+                        Intent next = new Intent(DirtyRoom.this, DirtyRoom.class);
                         startActivity(next);
                     }
                 });
@@ -200,7 +205,7 @@ public class Checkout extends AppCompatActivity {
                         dbh.setRoomDirty(rb.getText().toString());
                         rb.setEnabled(false);
 
-                        Intent next = new Intent(Checkout.this, Checkout.class);
+                        Intent next = new Intent(DirtyRoom.this, DirtyRoom.class);
                         startActivity(next);
                     }
                 });
@@ -211,8 +216,3 @@ public class Checkout extends AppCompatActivity {
     }
 
 }
-
-
-
-
-

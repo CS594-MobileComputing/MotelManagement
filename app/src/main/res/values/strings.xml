@@ -11,4 +11,7 @@
     <string name="title_activity_checkout">Checkout</string>
     <string name="title_activity_dirty_rooms">DirtyRooms</string>
     <string name="title_activity_facilities">Facilities</string>
+
+    <string name="title_activity_dirty_room">DirtyRoom</string>
+    <string name="title_activity_show_room_details">ShowRoomDetails</string>
 </resources>

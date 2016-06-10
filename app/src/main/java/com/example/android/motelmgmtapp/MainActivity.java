@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
+import com.example.android.motelmgmtapp.activities.DirtyRoom;
 import com.example.android.motelmgmtapp.activities.Facilities;
 import com.example.android.motelmgmtapp.activities.GuestActivities;
 import com.google.android.gms.appindexing.Action;
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         dirtyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next = new Intent(MainActivity.this, DirtyRooms.class);
+                Intent next = new Intent(MainActivity.this, DirtyRoom.class);
 
                 startActivity(next);
             }

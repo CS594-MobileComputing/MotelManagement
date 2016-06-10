@@ -400,6 +400,61 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     }
 
+    public void setRoomDirty(String room_no){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.execSQL("UPDATE room_status SET status = 'dirty' WHERE room = "+Integer.parseInt(room_no)+"");
+
+    }
+
+    public ArrayList getDirty (){
+
+        //System.out.println("inside method call....");
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = db.rawQuery("SELECT room FROM room_status where Status='dirty'", null);
+
+
+        //System.out.print("before try "+c.getCount());
+        try {
+
+            System.out.print("cursor size"+c.getCount());
+            c.moveToFirst();
+            if (c != null) {
+                do {
+                    for (int i = 0; i < c.getColumnCount(); i++) {
+                        int s = c.getInt(i);
+                        list.add(s);
+                    }
+                } while (c.moveToNext());
+            }
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("error in getLabelID in DB() :" + e);
+        }
+        finally
+        {
+            c.close();
+        }
+        //System.out.println("aaaa"+list.size());
+        //Log.d("size", list);
+        return list;
+
+    }
+
+
+
+    public void setAvailable(String room_no){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.execSQL("UPDATE room_status SET status = 'available' WHERE room = "+Integer.parseInt(room_no)+"");
+
+    }
     public boolean insert_facility_details(String room_no, String coffee,String tea, String omlett, String total){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv= new ContentValues();
